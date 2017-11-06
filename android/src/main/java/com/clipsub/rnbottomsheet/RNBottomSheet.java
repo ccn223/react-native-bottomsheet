@@ -76,9 +76,11 @@ public class RNBottomSheet extends ReactContextBaseJavaModule {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                if (which != cancelButtonIndex) {
+
+                // if (which != cancelButtonIndex) {
+                    // invoke callback when cancel bottom sheet
                     onSelect.invoke(which);
-                }
+                // }
             }
         });
 
